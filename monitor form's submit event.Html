@@ -6,14 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src='./lib/jquery.js'></script>
 </head>
 
 <body>
-    <form action='/login' target="_blank" method="post">
+    <form action='/login' id='f1'>
         <input type="text" name="email_or_mobile">
-        <input type="text" name="password">
+        <input type="password" name="password">
         <button type="submit">submit</button>
     </form>
+    <script>
+        $(function() {
+            $('#f1').submit(function() {
+                alert('monitored the forms submit event')
+            })
+
+        })
+    </script>
 </body>
 
 </html>
